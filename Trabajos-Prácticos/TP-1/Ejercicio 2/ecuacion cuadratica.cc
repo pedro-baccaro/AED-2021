@@ -15,17 +15,17 @@ int main()
 
     float A, B, C, X, Y;
 
-    cout << "Por favor, ingrese el coeficiente principal [A]*x^2 + Bx + C" << endl;
+    cout << "Ingrese A ( [A]*x^2 + B*x + C )" << endl;
     cin >> A;
     system("CLS");
-    cout << "Muy bien! Ahora ingrese el coeficiente lineal A*x^2 + [B]x + C" <<endl;
+    cout << "Ingrese B ( A*x^2 + [B]*x + C )" <<endl;
     cin >> B;
     system("CLS");
-    cout << "Muy bien! Ahora ingrese el termino independiente A*x^2 + B + [C]" << endl;
+    cout << "Ingrese C ( A*x^2 + B*x + [C] )" << endl;
     cin >> C;
     system("CLS");
 
-    cout << "Su ecuacion es: (" << A << ")x^2 + (" << B << ")x + (" << C << ")" << endl;
+    cout << "(" << A << ")*x^2 + (" << B << ")*x + (" << C << ")" << endl;
     cout << "En que valor de x desea evaluar esta ecuacion?" << endl;
     cin >> X;
     system("CLS");
