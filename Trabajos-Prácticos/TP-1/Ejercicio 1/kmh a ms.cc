@@ -7,6 +7,11 @@ pantalla el resultado de la conversión.
 */
 
 #include <iostream>
+#ifdef _WIN32 //Si el sistema operativo es windows
+#define CLEAR "cls"
+#else //En cualquier otro sistema operativo
+#define CLEAR "clear"
+#endif
 
 using namespace std;
 
@@ -16,9 +21,9 @@ int main()
 
     cout << "Por favor, ingrese una velocidad en Km/Hr:" << endl;
     cin >> velocidadKMHR;
+    system(CLEAR);
 
     velocidadMS = velocidadKMHR/3.6;
-
     cout << velocidadKMHR << "Km/Hr = " << velocidadMS << "M/S." <<endl;
     
     system("pause");

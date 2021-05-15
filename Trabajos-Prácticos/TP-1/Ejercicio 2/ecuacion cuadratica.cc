@@ -8,31 +8,37 @@ y = ax² +bx + c
 #include <iostream>
 #include <cmath>
 
+#ifdef _WIN32 //Si el sistema operativo es windows
+#define CLEAR "cls"
+#else //En cualquier otro sistema operativo
+#define CLEAR "clear"
+#endif
+
 using namespace std;
 
 int main()
 {
 
-    float A, B, C, X, Y;
+    float A, B, C, X1, X2;
 
     cout << "Ingrese A ( [A]*x^2 + B*x + C )" << endl;
     cin >> A;
-    system("CLS");
+    system(CLEAR);
     cout << "Ingrese B ( A*x^2 + [B]*x + C )" <<endl;
     cin >> B;
-    system("CLS");
+    system(CLEAR);
     cout << "Ingrese C ( A*x^2 + B*x + [C] )" << endl;
     cin >> C;
-    system("CLS");
+    system(CLEAR);
 
     cout << "(" << A << ")*x^2 + (" << B << ")*x + (" << C << ")" << endl;
-    cout << "En que valor de x desea evaluar esta ecuacion?" << endl;
-    cin >> X;
-    system("CLS");
 
-    Y = A*pow(X, 2.0) + B*X + C;
-    cout << "El resultado es igual a: " << Y << endl;
+    X1 = (-B+sqrt(pow(B, 2.0)-4*A*C))/(2*A);
+    X2 = (-B-sqrt(pow(B, 2.0)-4*A*C))/(2*A);
 
+    cout << "X1 = " << X1 << endl;
+    cout << "X2 = " << X2 << endl;
+    
     system("pause");
     return 0;
-    }
+}
