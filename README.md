@@ -1,11 +1,13 @@
 # AED-2021
 En este repositorio se subiran los Trabajos Prácticos resueltos de la materia Algorítmos y Estructura de Datos.
 
-Hay dos carpetas principales: 
+Hay tres carpetas principales: 
 
 1- Ejercicios-De-La-Guía 
 
 2- Trabajos-Prácticos
+
+3- Problemas-En-Clase
 
  
 
