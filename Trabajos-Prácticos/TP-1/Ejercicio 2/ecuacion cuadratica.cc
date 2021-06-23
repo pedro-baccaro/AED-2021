@@ -19,25 +19,34 @@ using namespace std;
 int main()
 {
 
-    float A, B, C, X1, X2;
+    double A, B, C, X1, X2;
 
-    cout << "Ingrese A ( [A]*x^2 + B*x + C )" << endl;
+    cout << "Ingrese A" << endl;
     cin >> A;
     system(CLEAR);
-    cout << "Ingrese B ( A*x^2 + [B]*x + C )" <<endl;
+    cout << "Ingrese B" <<endl;
     cin >> B;
     system(CLEAR);
-    cout << "Ingrese C ( A*x^2 + B*x + [C] )" << endl;
+    cout << "Ingrese C" << endl;
     cin >> C;
     system(CLEAR);
 
-    cout << "(" << A << ")*x^2 + (" << B << ")*x + (" << C << ")" << endl;
+    cout << "Ecuacion ingresada: (" << A << ")*x^2 + (" << B << ")*x + (" << C << ")." << endl;
 
-    X1 = (-B+sqrt(pow(B, 2.0)-4*A*C))/(2*A);
-    X2 = (-B-sqrt(pow(B, 2.0)-4*A*C))/(2*A);
+    if (pow(B, 2.0)-4*A*C >= 0 && 2*A!=0){
+        X1 = (-B+sqrt(pow(B, 2.0)-4*A*C))/(2*A);
+        X2 = (-B-sqrt(pow(B, 2.0)-4*A*C))/(2*A); 
 
-    cout << "X1 = " << X1 << endl;
-    cout << "X2 = " << X2 << endl;
+        cout << "X1 = " << X1 << endl;
+        cout << "X2 = " << X2 << endl;   
+    }else{
+        if (pow(B,2.0)-4*A*C < 0)
+            cout << "Error: Se intento calcular la raiz cuadrada de un valor negativo." << endl;
+        if (2*A==0)
+            cout << "Error: Se intento dividir por 0." << endl;
+        
+        cout << "La ecuacion no posee raices reales." << endl;
+    }
     
     system("pause");
     return 0;
